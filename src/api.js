@@ -1,16 +1,16 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var postMessage = require('./users/post-message');
+var PostMessage = require('./users/post-message');
 var posts = require('./users/posts/posts');
 
 function api(clock) {
 	var app = express();
 	app.use(bodyParser.json());
 
-	var postMessage2 = postMessage(posts(clock));
+	var postMessage = PostMessage(posts(clock));
 
 	app.post('/users/:username/post', function(req, res) {
-		postMessage2.execute(req.params.username, req.body.message);
+		postMessage.execute(req.params.username, req.body.message);
 	})
 
 	return {

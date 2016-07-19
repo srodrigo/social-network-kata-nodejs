@@ -3,7 +3,7 @@ function posts(clock) {
 
 	return {
 		create: function(message, username) {
-			posts.push({message: message, username: username});
+			posts.push({message: message, username: username, date: clock.now()});
 		},
 		all: function() {
 			return posts.slice();

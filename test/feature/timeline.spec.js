@@ -6,7 +6,7 @@ var minutesAgo = clock.minutesAgo;
 var constNow = clock.constNow;
 
 var api = require('./../../src/api');
-var app = api.app(clock);
+var app = api(clock).app;
 
 describe('Timeline', function() {
 	it('should show user\'s timeline', function(done) {

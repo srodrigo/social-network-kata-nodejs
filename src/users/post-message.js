@@ -1,13 +1,9 @@
-var self = this;
-
-var execute = function(username, message) {
-	self.posts.create(message, username);
+function postMessage(posts) {
+	return {
+		execute: function(username, message) {
+			posts.create(message, username);
+		}
+	}
 }
 
-module.exports = {
-	createPostMessage: function(posts) {
-		self.posts = posts;
-		return self;
-	},
-	execute: execute
-}
+module.exports = postMessage

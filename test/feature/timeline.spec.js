@@ -15,17 +15,20 @@ describe('Timeline', function() {
 		request(app)
 			.post('/users/alice/post')
 			.set('Accept', 'application/json')
-			.send({'message': 'I love the weather today'});
+			.send({'message': 'I love the weather today'})
+			.expect(200, done);
 
 		request(app)
 			.post('/users/bob/post')
 			.set('Accept', 'application/json')
-			.send({'message': 'Damn! We lost!'});
+			.send({'message': 'Damn! We lost!'})
+			.expect(200, done);
 		
 		request(app)
 			.post('/users/bob/post')
 			.set('Accept', 'application/json')
-			.send({'message': 'Good game though.'});
+			.send({'message': 'Good game though.'})
+			.expect(200, done);
 
 		clock.append(constNow(), constNow(), constNow());
 

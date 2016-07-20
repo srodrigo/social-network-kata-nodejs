@@ -1,9 +1,9 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var PostMessage = require('./users/post-message');
-var GetTimeline = require('./users/get-timeline');
-var Posts = require('./users/posts/posts');
-var TimelineFormatter = require('./users/posts/timeline-formatter');
+var PostMessage = require('./actions/post-message');
+var GetTimeline = require('./actions/get-timeline');
+var Posts = require('./model/users/posts/posts');
+var TimelineFormatter = require('./model/users/posts/timeline-formatter');
 
 function api(clock) {
 	var app = express();

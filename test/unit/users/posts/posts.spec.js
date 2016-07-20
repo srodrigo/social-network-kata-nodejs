@@ -11,6 +11,7 @@ describe('Posts', function() {
 		var posts = Posts(clock);
 		var date = constNow();
 		clock.append(date);
+
 		posts.create('Post message', 'username');
 
 		var allPosts = posts.all();
@@ -27,6 +28,7 @@ describe('Posts', function() {
 		posts.create('Another post message', 'another-username');
 
 		var byUsername = posts.byUsername('username');
+
 		byUsername.length.should.equal(1);
 		byUsername[0].should.eql({message: 'Post message', username: 'username', date: firstDate});
 	});

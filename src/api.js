@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var PostMessage = require('./actions/post-message');
 var GetTimeline = require('./actions/get-timeline');
-var Posts = require('./model/users/posts/posts');
+var Posts = require('./infra/users/posts/posts');
 var TimelineFormatter = require('./model/users/posts/timeline-formatter');
 
 function api(clock) {

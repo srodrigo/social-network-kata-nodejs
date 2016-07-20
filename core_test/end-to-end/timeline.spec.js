@@ -5,7 +5,7 @@ var clock = require('./../infra/test-clock');
 var minutesAgo = clock.minutesAgo;
 var constNow = clock.constNow;
 
-var api = require('./../../src/api');
+var api = require('./../../core/api');
 var app = api(clock).app;
 
 describe('Timeline', function() {

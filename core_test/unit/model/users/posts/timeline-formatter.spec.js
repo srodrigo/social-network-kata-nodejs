@@ -2,8 +2,8 @@ var chai = require('chai');
 var expect = chai.expect;
 var should = require('should');
 
-var TimelineFormatter = require('../../../../../src/model/users/posts/timeline-formatter');
-var Post = require('../../../../../src/model/users/posts/post');
+var TimelineFormatter = require('../../../../../core/model/users/posts/timeline-formatter');
+var Post = require('../../../../../core/model/users/posts/post');
 var clock = require('../../../../infra/test-clock');
 var secondsAgo = clock.secondsAgo;
 var constNow = clock.constNow;

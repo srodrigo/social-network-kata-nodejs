@@ -2,7 +2,7 @@ const MILLIS_IN_MINUTE = 60 * 1000;
 
 function timelineFormatter(clock) {
 	function formatInSeconds(milliseconds) {
-		var seconds = milliseconds / 1000;
+		var seconds = Math.floor(milliseconds / 1000);
 		if (seconds == 1) {
 			return "1 second ago";
 		}
@@ -10,7 +10,7 @@ function timelineFormatter(clock) {
 	}
 
 	function formatInMinutes(milliseconds) {
-		var minutes = milliseconds / MILLIS_IN_MINUTE;
+		var minutes = Math.floor(milliseconds / MILLIS_IN_MINUTE);
 		if (minutes == 1) {
 			return "1 minute ago";
 		}

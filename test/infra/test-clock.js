@@ -14,6 +14,10 @@ var append = function() {
 	}
 }
 
+var secondsAgo = function (seconds) {
+	return NOW - seconds * MILLIS_IN_SECOND
+}
+
 var minutesAgo = function (minutes) {
 	return NOW - minutes * MILLIS_IN_MINUTE;
 }
@@ -25,6 +29,7 @@ var constNow = function() {
 module.exports = {
 	now: now,
 	append: append,
+	secondsAgo: secondsAgo,
 	minutesAgo: minutesAgo,
 	constNow: constNow
 }

@@ -10,7 +10,7 @@ describe('Posts', function() {
 	it('should store posts', function() {
 		var posts = Posts(clock);
 		var date = constNow();
-		clock.append([date]);
+		clock.append(date);
 		posts.create('Post message', 'username');
 
 		var allPosts = posts.all();
@@ -22,7 +22,7 @@ describe('Posts', function() {
 		var posts = Posts(clock);
 		var firstDate = constNow();
 		var secondDate = constNow();
-		clock.append([firstDate, secondDate]);
+		clock.append(firstDate, secondDate);
 		posts.create('Post message', 'username');
 		posts.create('Another post message', 'another-username');
 

@@ -35,7 +35,7 @@ describe('Timeline', function() {
 		request(app)
 			.get('/users/alice/timeline')
 			.set('Accept', 'application/json')
-			.expect(200, ['I love the weather today (5 minutes ago)'], done);
+			.expect(200, ['I love the weather today (5 minutes ago)']);
 
 		request(app)
 			.get('/users/bob/timeline')

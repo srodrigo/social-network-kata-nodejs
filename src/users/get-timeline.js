@@ -1,7 +1,9 @@
-function getTimeline(posts) {
+function getTimeline(posts, formatter) {
 	return {
 		execute: function(username) {
-			posts.byUsername(username);
+			return posts.byUsername(username)
+				.sort((p1, p2) => p1.date < p2.date)
+				.map(p => formatter.format(p));
 		}
 	}
 }

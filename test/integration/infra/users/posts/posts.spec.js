@@ -2,8 +2,8 @@ var chai = require('chai');
 var expect = chai.expect;
 var should = require('should');
 
-var Posts = require('./../../../../src/infra/users/posts/posts');
-var clock = require('./../../../infra/test-clock');
+var Posts = require('./../../../../../src/infra/users/posts/posts');
+var clock = require('./../../../../infra/test-clock');
 var constNow = clock.constNow;
 
 describe('Posts', function() {
